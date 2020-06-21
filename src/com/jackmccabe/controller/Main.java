@@ -13,6 +13,5 @@ public class Main {
         BankAccount bankAccount = new BankAccount(customer);
         menu.welcomeMessage(customer);
         menu.actions(bankAccount);
-
     }
 }

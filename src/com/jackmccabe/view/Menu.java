@@ -30,21 +30,29 @@ public class Menu {
     public void welcomeMessage(Customer customer){
 
         System.out.println("Welcome " + customer.getFirstName() + " " + customer.getLastName());
+    }
+
+    public void userInputOptions(){
+
         System.out.println("A. Check Balance");
         System.out.println("B. Deposit");
         System.out.println("C. Withdraw");
-        System.out.println("D. Transaction History");
+        System.out.println("D. Transaction Summary");
         System.out.println("E. Exit");
 
     }
 
+
     public void actions(BankAccount bankAccount){
 
         do {
+            System.out.println("\n");
+            userInputOptions();
             System.out.println("Enter an option");
             options = scanner.next().charAt(0);
 
             switch (options){
+
 
                 case 'A':
                     System.out.println("Your account balance is " + bankAccount.getCustomerCurrentBankAccount() + "$");

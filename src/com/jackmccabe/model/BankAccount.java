@@ -1,5 +1,8 @@
 package com.jackmccabe.model;
 
+import javax.swing.text.DateFormatter;
+import java.time.LocalDateTime;
+
 public class BankAccount{
 
     private int moneyInAccount;
@@ -23,6 +26,10 @@ public class BankAccount{
        return moneyInAccount;
     }
 
+    public int getPayeeBankAccount(Customer customer){
+        return moneyInAccount;
+    }
+
     public void addingMoneyToAccount(int deposit){
 
             if (deposit >= 0){
@@ -43,6 +50,10 @@ public class BankAccount{
                 throw new IllegalArgumentException("Enter an amount higher than 0 or you don't " +
                         "have enough money in your account");
             }
+    }
+
+    public void transferToPayee(int amount, Customer payee){
+
     }
 
 
