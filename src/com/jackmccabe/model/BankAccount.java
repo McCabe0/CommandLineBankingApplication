@@ -19,6 +19,7 @@ public class BankAccount{
     }
 
     public void creditingMoneyFromTheAccount(int credit){
+        moneyInAccount = moneyInAccount - credit;
 
     }
 
