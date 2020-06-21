@@ -25,7 +25,7 @@ public class BankAccount{
 
     public void addingMoneyToAccount(int deposit){
 
-            if (deposit > 0){
+            if (deposit >= 0){
                 moneyInAccount = moneyInAccount + deposit;
                 depositTransactions = deposit;
             } else {
@@ -36,7 +36,7 @@ public class BankAccount{
 
     public void creditingMoneyFromTheAccount(int credit){
 
-            if (credit > 0 && moneyInAccount >= credit){
+            if (credit >= 0 && moneyInAccount >= credit){
                 moneyInAccount = moneyInAccount - credit;
                 creditTransactions = credit;
         } else {

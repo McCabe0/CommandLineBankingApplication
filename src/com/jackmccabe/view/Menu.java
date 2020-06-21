@@ -6,8 +6,6 @@ import com.jackmccabe.model.Customer;
 import java.util.Scanner;
 
 public class Menu {
-    private Customer customer;
-    private BankAccount bankAccount;
     private char options;
     private Scanner scanner = new Scanner(System.in);
     private String firstName;
@@ -38,9 +36,6 @@ public class Menu {
         System.out.println("D. Transaction History");
         System.out.println("E. Exit");
 
-
-
-
     }
 
     public void actions(BankAccount bankAccount){
@@ -56,7 +51,7 @@ public class Menu {
                     break;
 
                 case 'B':
-                    System.out.println("Enter the value you would like to deposit");
+                    System.out.println("Enter the value you would like to deposit ");
                     int amount = scanner.nextInt();
                     bankAccount.addingMoneyToAccount(amount);
                     break;
