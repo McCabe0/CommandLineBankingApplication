@@ -9,9 +9,12 @@ public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu();
 
-        Customer customer = new Customer("Jack", "McCabe");
+        menu.creatingCustomer();
+
+        Customer customer = new Customer(menu.getFirstName(), menu.getLastName());
         BankAccount bankAccount = new BankAccount(customer);
         menu.welcomeMessage(customer);
+        menu.actions(bankAccount);
 
 
     }
