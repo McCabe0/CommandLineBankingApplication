@@ -7,12 +7,5 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Customer customer = new Customer("Jack", "McCabe");
-
-        BankAccount bankAccount = new BankAccount(0,customer);
-
-
-
-
     }
 }
