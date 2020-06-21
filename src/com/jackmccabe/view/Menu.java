@@ -34,11 +34,13 @@ public class Menu {
 
     public void userInputOptions(){
 
-        System.out.println("A. Check Balance");
-        System.out.println("B. Deposit");
-        System.out.println("C. Withdraw");
-        System.out.println("D. Transaction Summary");
-        System.out.println("E. Exit");
+        System.out.println(
+                "A. Check Balance\n" +
+                "B. Deposit\n" +
+                "C. Withdraw\n" +
+                "D. Transaction Summary\n" +
+                "E. Exit"
+        );
 
     }
 
