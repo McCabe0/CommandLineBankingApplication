@@ -3,23 +3,46 @@ package com.jackmccabe.model;
 public class BankAccount{
 
     private int moneyInAccount;
+    private int depositTransactions;
+    private int creditTransactions;
     private Customer customer;
 
-    public BankAccount(int moneyInAccount, Customer customer) {
-        this.moneyInAccount = moneyInAccount;
+    public BankAccount(Customer customer) {
         this.customer = customer;
     }
 
-    public int getCustomerCurrentBankAccount(Customer customer){
+    public int getDepositTransactions() {
+        return depositTransactions;
+    }
+
+    public int getCreditTransactions() {
+        return creditTransactions;
+    }
+
+    public int getCustomerCurrentBankAccount(){
        return moneyInAccount;
     }
 
     public void addingMoneyToAccount(int deposit){
-        moneyInAccount = moneyInAccount + deposit;
+
+            if (deposit > 0){
+                moneyInAccount = moneyInAccount + deposit;
+                depositTransactions = deposit;
+            } else {
+                throw new IllegalArgumentException("Enter an amount higher than 0");
+        }
+
     }
 
     public void creditingMoneyFromTheAccount(int credit){
-        moneyInAccount = moneyInAccount - credit;
+
+            if (credit > 0 && moneyInAccount >= credit){
+                moneyInAccount = moneyInAccount - credit;
+                creditTransactions = credit;
+        } else {
+                throw new IllegalArgumentException("Enter an amount higher than 0 or you don't " +
+                        "have enough money in your account");
+            }
     }
 
 
